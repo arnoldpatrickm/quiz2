@@ -71,7 +71,7 @@ choices.forEach((choice) => {
         const selectedAnswer = selectedChoice.dataset['number'];
         const classToApply =
             selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
-            document.getElementById("why-text").innerHTML = currentQuestion['text' + selectedAnswer];
+            document.getElementById("why-text").innerHTML = currentQuestion['text' + selectedAnswer] + "<p><b>the correct answer was: </b></p>" + currentQuestion['choice' + currentQuestion.answer];
         if (classToApply === 'correct') {
            
             incrementScore(CORRECT_BONUS);
