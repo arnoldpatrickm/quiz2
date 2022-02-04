@@ -28,7 +28,7 @@ fetch("questions.json")
 
 //CONSTANTS
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 35;
+const MAX_QUESTIONS = 40;
 
 startGame = () => {
     questionCounter = 0;
@@ -73,27 +73,28 @@ choices.forEach((choice) => {
             selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
             document.getElementById("why-text").innerHTML = currentQuestion['text' + selectedAnswer] + "<p><b>the correct answer was: </b></p>" + currentQuestion['choice' + currentQuestion.answer];
         if (classToApply === 'correct') {
-           
+
             incrementScore(CORRECT_BONUS);
-       
+
        }
             selectedChoice.parentElement.classList.add(classToApply);
 
             setTimeout(() => {
                 selectedChoice.parentElement.classList.remove(classToApply);
             }, 1000);
-           
+
             why.onclick = function() {
                 getNewQuestion();
                 document.getElementById("why-text").innerHTML = "";
            };
-               
-            
+
+
 
     });
 });
 
 incrementScore = (num) => {
     score += num;
-    scoreText.innerText = score;
+    questionsCorrect = score / CORRECT_BONUS;
+    scoreText.innerHTML = questionsCorrect + '/' +  MAX_QUESTIONS + ' - ' + ( questionsCorrect / MAX_QUESTIONS) * 100 + '%';
 };

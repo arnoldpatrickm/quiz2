@@ -1,63 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Quick Quiz - Play</title>
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="game.css" />
-  </head>
-  <body>
+<script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
+
+<body>
     <div class="container">
-      <div id="loader"></div>
-      <div id="game" class="justify-center flex-column hidden">
-        <div id="hud">
-          <div id="hud-item">
-            <p id="progressText" class="hud-prefix">
-              Question
-            </p>
-            <div id="topic" class="hud-prefix">
-              <h5 id="topic">Topic</h5>
+        <div id="loader"></div>
+        <div id="game" class="justify-center flex-column hidden">
+            <div id="hud">
+                <div id="hud-item">
+                    <p id="progressText" class="hud-prefix">
+                        Question
+                    </p>
+                    <div id="topic" class="hud-prefix">
+                        <h5 id="topic">Topic</h5>
+                    </div>
+                    <div id="progressBar">
+                        <div id="progressBarFull"></div>
+                    </div>
+                </div>
+                <div id="hud-item">
+                    <p class="hud-prefix">
+                        Score
+                    </p>
+                    <h1 class="hud-main-text" id="score">
+                        0/40 - 0%
+                    </h1>
+                </div>
             </div>
-            <div id="progressBar">
-              <div id="progressBarFull"></div>
+
+            <h2 id="question"></h2>
+            <div class="choice-container">
+                <p class="choice-prefix">A</p>
+                <p class="choice-text" data-number="1"></p>
             </div>
-          </div>
-          <div id="hud-item">
-            <p class="hud-prefix">
-              Score
-            </p>
-            <h1 class="hud-main-text" id="score">
-              0
-            </h1>
-          </div>
+            <div class="choice-container">
+                <p class="choice-prefix">B</p>
+                <p class="choice-text" data-number="2"></p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">C</p>
+                <p class="choice-text" data-number="3"></p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">D</p>
+                <p class="choice-text" data-number="4"></p>
+            </div>
+            <div class="why-container">
+                <p id="why-prefix"></p>
+                <p id="why-text"></p>
+            </div>
         </div>
-        
-        <h2 id="question"></h2>
-        <div class="choice-container">
-          <p class="choice-prefix">A</p>
-          <p class="choice-text" data-number="1"></p>
-        </div>
-        <div class="choice-container">
-          <p class="choice-prefix">B</p>
-          <p class="choice-text" data-number="2"></p>
-        </div>
-        <div class="choice-container">
-          <p class="choice-prefix">C</p>
-          <p class="choice-text" data-number="3"></p>
-        </div>
-        <div class="choice-container">
-          <p class="choice-prefix">D</p>
-          <p class="choice-text" data-number="4"></p>
-        </div>   
-        <div class="why-container">
-          <p id="why-prefix"></p>
-          <p id="why-text"></p>
-        </div>
-      </div>
-      </div>
+    </div>
 
     <script src="game.js"></script>
-  </body>
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'6d75e3fb8dab7d8c',m:'e_FJBJMbOWiEFg061AKHaoJphZc85ap8iIkswfDHuAY-1643830819-0-ARZlvooCilFwjiS2xBSmVrzdLyDPt/LHPFVrQ21pF/ZV4eiY8k7g83nE3ma9tQ3pGXpwPCGTdFK0h0HBfT4k1CZGdOrM7E/ITNXpoEvsKQewVgnosD+erEJchDS+aPvSdvPTX4VsSzGU8tfR0rtGoBH02xVRf3/AFh8ftfL+08uP72s6DlxXK7DY2ygJxjLe7g==',s:[0xee93eff925,0x3f1a8c46c4],}})();</script></body>
+
 </html>
